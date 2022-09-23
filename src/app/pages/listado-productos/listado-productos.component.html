@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="col-xs-12">
+        <h1>Listado Productos</h1>
+        <hr>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th colspan="5"></th>
+                    <th colspan="1">
+                        <span><a class="fa fa-plus" routerLink="/alta">Agregar</a></span>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Stock</th>
+                    <th>Categoria</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos">
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.codigo}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.stock}}</td>
+                    <td>{{producto.categoria.nombre}}</td>
+                    <td>
+                        <div>
+                            <span><a class="fa fa-pencil mr-10" routerLink="actualizar/{{producto.id}}"></a></span>
+                            <span><a class="fa fa-trash" (click)="deleteProducto(producto.id)"></a></span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

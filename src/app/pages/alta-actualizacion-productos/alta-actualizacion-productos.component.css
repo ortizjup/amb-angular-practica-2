@@ -1,0 +1,12 @@
+.mt-10{
+    margin-top: 10px;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.validation-error{
+    color: red;
+    font-weight: bold;
+}
